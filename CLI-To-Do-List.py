@@ -47,6 +47,6 @@ while True:
     print("\nEnter a command or 'hlp' to get a list of commands")
     command = input()
     
-    while command == "hlp but it's chicken":
+    while command == "hlp":
         displayCommandList()
         command = input()
