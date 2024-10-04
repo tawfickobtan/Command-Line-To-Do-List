@@ -7,6 +7,12 @@ filesInDirectory = glob.glob(os.path.join(cwd, "*.txt"))
 filetouse = "none"
 listofitems = []
 
+def displayCommandList():
+    print("\nhlp : Shows list of commands that can be executed")
+    print("add <List_Item> : Adds list item to list")
+    print("del <List_Item_Index> : Remove list item of index <List_Item_Index>")
+    print("qit : Quits program and saves to loaded file\n")
+
 if filesInDirectory:
     print("Here is a list of the text files in this directory:\n")
     count = 1
@@ -28,7 +34,19 @@ if filesInDirectory:
     if listofitems and not listofitems[-1]:
         listofitems.pop()
 else:
-    print("No text files in directory.\n Fresh start :)")
+    print("No text files in directory.\n Fresh start:)")
 
-for index in range(len(listofitems)):
-    print(str(index + 1) + ". " + listofitems[index])
+while True:
+    if not listofitems:
+        print("No items in list")
+    else:
+        print("To-Do List:\n")
+        for index in range(len(listofitems)):
+            print(str(index + 1) + ". " + listofitems[index])
+
+    print("\nEnter a command or 'hlp' to get a list of commands")
+    command = input()
+    
+    while command == "hlp":
+        displayCommandList()
+        command = input()

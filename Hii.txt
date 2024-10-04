@@ -1,2 +1,4 @@
-something but it's part 1
-something but it's part 2
+Math Lecture
+Math Homework
+Physics Lecture 
+Physics Homework
